@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/dewinterjack/bank#readme",
   "devDependencies": {
-    "cucumber": "^4.0.0"
+    "chai": "^4.1.2",
+    "cucumber": "^4.0.0",
+    "mocha": "^5.2.0"
   }
 }
