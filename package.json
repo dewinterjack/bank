@@ -1,0 +1,23 @@
+{
+  "name": "bank",
+  "version": "1.0.0",
+  "description": "Record and retrieve bank transactions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dewinterjack/bank.git"
+  },
+  "keywords": [],
+  "author": "Jack Dewinter <jackdewinter1@gmail.com> (http://github.com/dewinterjack)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dewinterjack/bank/issues"
+  },
+  "homepage": "https://github.com/dewinterjack/bank#readme",
+  "devDependencies": {
+    "cucumber": "^4.0.0"
+  }
+}
