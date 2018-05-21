@@ -3,12 +3,12 @@ Record and retrieve bank transactions.
 
 **User Stories**
 
-```As a user so I can budget, I want to be able to record my deposits and withdrawals.
-As a user so I can understand a payment better, I want to have the data of a transaction saved
+```
+As a user so I can understand a payment better, I want to have the data of a transaction saved.
 
 As a user so I know the impact of a transaction, I want my balance to be updated.
 
-As a user so I can plan my budget, I want to be able to look back at my past transactions
+As a user so I can plan my budget, I want to be able to look back at my past transactions.
 ```
 
 **Structure**
