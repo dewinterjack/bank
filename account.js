@@ -6,8 +6,13 @@ module.exports = function(){
     return balance;
   }
 
+  function deposit(amount){
+    balance+= amount;
+  }
+
   return {
-    getBalance: getBalance
+    getBalance: getBalance,
+    deposit: deposit
   };
 
 }();
