@@ -1,7 +1,8 @@
 module.exports = function(){
 
   function header(headers){
-    return blockify(head);
+    head = headers[0];
+    return blockify(head[0].toUpperCase() + head.substring(1));
   }
 
   function blockify(string){
