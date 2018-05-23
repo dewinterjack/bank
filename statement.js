@@ -1,8 +1,9 @@
 module.exports = function(){
 
   function header(headers){
-    head = headers[0];
-    return blockify(head[0].toUpperCase() + head.substring(1));
+    var formatted = headers.map(head => 
+      blockify(head[0].toUpperCase() + head.substring(1)));
+    return formatted;
   }
 
   function blockify(string){
@@ -14,8 +15,7 @@ module.exports = function(){
   }
 
   return {
-    header: header,
-    blockify: blockify
+    header: header
   };
 
 }();
