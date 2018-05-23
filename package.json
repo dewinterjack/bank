@@ -4,7 +4,7 @@
   "description": "Record and retrieve bank transactions.",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "echo 'Behaviour Tests:' && cucumber-js && echo '\\nUnit Tests:' && mocha"
   },
   "repository": {
     "type": "git",
