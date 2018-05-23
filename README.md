@@ -13,13 +13,13 @@ As a user so I can plan my budget, I want to be able to look back at my past tra
 
 **Structure**
 
-Singleton function, Account.
-
 Public methods:
 
 * deposit
 * withdraw
 * printStatement
+* getBalance
+* getTransactions
 
 **Dependencies**
 
@@ -47,7 +47,7 @@ npm test
 Run:
 
 ```javascript
-var account = Account.getInstance();
+var account = require(./account);
 account.deposit(500);
 account.withdraw(35);
 account.printStatement();

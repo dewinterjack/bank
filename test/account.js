@@ -10,14 +10,14 @@ describe("Bank Account", function(){
 
   describe("#getBalance", function(){
     it("returns 0 when the account is created", function(){
-      expect(account.getBalance()).to.eq(0);
+      expect(account.statement()).to.eq(0);
     });
   });
 
   describe("#deposit", function(){
     it("adds an amount to the balance", function(){
       account.deposit(300);
-      expect(account.getBalance()).to.eq(300);
+      expect(account.statement()).to.eq(300);
     });
   });
 
@@ -25,18 +25,11 @@ describe("Bank Account", function(){
     it("subtracts an amount from the balance", function(){
       account.deposit(300);
       account.withdraw(100);
-      expect(account.getBalance()).to.eq(200);
+      expect(account.statement()).to.eq(200);
     });
   });
 
-  describe("#getTransactions", function(){
-    it("returns a list of transaction objects", function(){
-      account.deposit(650);
-      expect(account.getTransactions()[0]).to.be.an.instanceof(Transaction);
-    });
-  });
-
-  describe("#printStatement", function(){
+  describe("#statement", function(){
     it("prints a list of transactions made", function(){
 
     });
