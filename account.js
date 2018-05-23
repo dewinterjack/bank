@@ -24,12 +24,14 @@ module.exports = function(){
   }
 
   function printStatement(){
-    return getBalance();
+
   }
 
   return {
+    getBalance: getBalance,
     deposit: deposit,
     withdraw: withdraw,
+    getTransactions: getTransactions,
     statement: printStatement,
     reset: function(){
       balance = 0;
