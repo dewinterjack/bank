@@ -1,3 +1,5 @@
+var Transaction = require("./transaction");
+
 module.exports = function(){
 
   var balance = 0;
@@ -9,10 +11,12 @@ module.exports = function(){
 
   function deposit(amount){
     balance+= amount;
+    transactions.push(new Transaction('depost', amount));
   }
 
   function withdraw(amount){
     balance-= amount;
+    transactions.push(new Transaction('withdraw', amount));
   }
 
   function getTransactions(){

@@ -1,5 +1,6 @@
 var expect = require("chai").expect;
 var account = require("../account");
+var Transaction = require("../transaction");
 
 describe("Bank Account", function(){
 
