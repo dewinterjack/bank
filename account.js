@@ -1,4 +1,5 @@
 var Transaction = require("./transaction");
+var statement = require("./statement");
 
 module.exports = function(){
 
@@ -19,24 +20,17 @@ module.exports = function(){
     transactions.push(new Transaction('withdraw', amount));
   }
 
-  function getTransactions(){
-    return transactions;
-  }
-
-  function printStatement(){
-
+  function reset(){
+    balance = 0;
+    transactions = [];
   }
 
   return {
-    getBalance: getBalance,
-    deposit: deposit,
-    withdraw: withdraw,
-    getTransactions: getTransactions,
-    statement: printStatement,
-    reset: function(){
-      balance = 0;
-      transactions = [];
-    }
+    getBalance  : getBalance,
+    deposit     : deposit,
+    withdraw    : withdraw,
+    reset       : reset,
+    statement   : () => { statement.print(); }
   };
 
 }();

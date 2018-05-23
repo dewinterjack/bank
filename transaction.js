@@ -1,5 +1,7 @@
 function Transaction(type, amount){
   this.date = new Date();
+  this.type = type;
+  this.amount = amount;
 }
 
 Transaction.prototype.getDate = function(){

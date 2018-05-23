@@ -1,6 +1,5 @@
 var expect = require("chai").expect;
 var account = require("../account");
-var Transaction = require("../transaction");
 
 describe("Bank Account", function(){
 
@@ -26,19 +25,6 @@ describe("Bank Account", function(){
       account.deposit(300);
       account.withdraw(100);
       expect(account.getBalance()).to.eq(200);
-    });
-  });
-
-  describe("#getTransactions", function(){
-    it("returns a list of transaction objects", function(){
-      account.deposit(650);
-      expect(account.getTransactions()[0]).to.be.an.instanceof(Transaction);
-    });
-  });
-
-  describe("#printStatement", function(){
-    it("prints a list of transactions made", function(){
-
     });
   });
 });
