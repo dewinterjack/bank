@@ -10,9 +10,16 @@ describe("Bank Account", function(){
   });
 
   describe("#deposit", function(){
-    it("adds an integer to the balance", function(){
+    it("adds an amount to the balance", function(){
       account.deposit(300);
       expect(account.getBalance()).to.eq(300);
+    });
+  });
+
+  describe("#withdraw", function(){
+    it("subtracts an amount from the balance", function(){
+      account.withdraw(100);
+      expect(account.getBalance()).to.eq(200);
     });
   });
 });

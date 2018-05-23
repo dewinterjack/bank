@@ -10,9 +10,14 @@ module.exports = function(){
     balance+= amount;
   }
 
+  function withdraw(amount){
+    balance-= amount;
+  }
+
   return {
     getBalance: getBalance,
-    deposit: deposit
+    deposit: deposit,
+    withdraw: withdraw
   };
 
 }();
