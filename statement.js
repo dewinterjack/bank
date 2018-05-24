@@ -1,11 +1,5 @@
 module.exports = function(){
 
-  function transactionProperties(obj) {
-    if (obj == null) return; // recursive approach
-    console.log(Object.getOwnPropertyNames(obj));
-    logAllProperties(Object.getPrototypeOf(obj));
-  }
-
   function header(headers){
     var formatted = headers.map(head => 
       blockify(head[0].toUpperCase() + head.substring(1)));
@@ -16,8 +10,10 @@ module.exports = function(){
     return '| ' + string + ' |';
   }
 
-  function blockifyByLargest(){
-
+  function body(data){
+    var formatted = data.map(item => 
+      blockify(item));
+    return formatted;
   }
 
   function formatRows(transactions){
@@ -31,7 +27,8 @@ module.exports = function(){
   }
 
   return {
-    header: header
+    header: header,
+    body: body
   };
 
 }();

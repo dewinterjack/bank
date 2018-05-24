@@ -24,7 +24,23 @@ module.exports = function(){
       transactions = [];
     },
     
-    statement: () => { statement.print(); }
+    statement: function(){
+      var output = '';
+      var head = statement.header(['date', 'type', 'amount']); 
+      head.forEach(function(item){
+        output+=item;
+      });
+      console.log(output);
+      output = '';
+      var body = transactions.map(t => [t.getDate(), t.type, t.amount]);
+      body.forEach(function(item){
+          statement.body(item).forEach(function(item){
+            output+=item;
+          });
+          console.log(output);
+          output = '';
+      });
+      }
   };
 
 }();
