@@ -1,5 +1,6 @@
 var expect = require("chai").expect;
 var Account = require("../account");
+var Statement = require("../statement");
 var account;
 
 beforeEach(function(){
@@ -9,6 +10,10 @@ beforeEach(function(){
 describe("Account", function(){
   it("Has a balance of 0 when created", function(){
     expect(account.getBalance()).to.eq(0);
+  });
+
+  it("Has a statement when created", function(){
+    expect(account.statement).to.be.an.instanceof(Statement);
   });
 
   describe("#deposit", function(){

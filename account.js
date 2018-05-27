@@ -1,5 +1,8 @@
+var Statement = require("./statement");
+
 function Account(){
   this.balance = 0;
+  this.statement = new Statement();
 }
 
 Account.prototype.getBalance = function(){
