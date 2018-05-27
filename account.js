@@ -2,7 +2,7 @@ var Statement = require("./statement");
 
 function Account(){
   this.balance = 0;
-  this.statement = new Statement(this.balance);
+  this.statement = new Statement();
 }
 
 Account.prototype.getBalance = function(){
