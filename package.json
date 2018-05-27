@@ -4,7 +4,7 @@
   "description": "Record and retrieve bank transactions.",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'Behaviour Tests:' && cucumber-js && echo '\\nUnit Tests:' && mocha"
+    "test": "echo Unit Tests: && mocha"
   },
   "repository": {
     "type": "git",
@@ -19,10 +19,6 @@
   "homepage": "https://github.com/dewinterjack/bank#readme",
   "devDependencies": {
     "chai": "^4.1.2",
-    "cucumber": "^4.0.0",
     "mocha": "^5.2.0"
-  },
-  "dependencies": {
-    "npm": "^6.0.1"
   }
 }
