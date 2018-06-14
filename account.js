@@ -33,7 +33,7 @@ module.exports = function(){
       transactions = [];
     },
     
-    statement: function(){
+    printStatement: function(){
       var output = '';
       var head = statement.header(['date', 'type', 'amount']); 
       head.forEach(function(item){
