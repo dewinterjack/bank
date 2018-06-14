@@ -27,10 +27,17 @@ describe("Bank Account", function(){
   });
 
   describe("#withdraw", function(){
+
     it("subtracts an amount from the balance", function(){
       account.deposit(300);
       account.withdraw(100);
       expect(account.getBalance()).to.eq(200);
+    });
+
+    it("throws an error if an integer isn't passed in", function(){
+      expect(function(){
+        account.withdraw("Hello!");
+      }).to.throw("Amount to withdraw must be a number.");
     });
   });
 });

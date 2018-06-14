@@ -20,8 +20,12 @@ module.exports = function(){
     },
 
     withdraw: function withdraw(amount){
-      balance-= amount;
-      transactions.push(new Transaction('withdraw', amount));
+      if(typeof amount == 'number'){
+        balance-= amount;
+        transactions.push(new Transaction('withdraw', amount));
+      } else {
+        throw new TypeError("Amount to withdraw must be a number.");
+      }  
     },
 
     reset: function(){
