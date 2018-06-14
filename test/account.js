@@ -18,6 +18,12 @@ describe("Bank Account", function(){
       account.deposit(300);
       expect(account.getBalance()).to.eq(300);
     });
+
+    it("throws an error if an integer isn't passed in", function(){
+      expect(function(){
+        account.deposit("Hello!");
+      }).to.throw("Amount to deposit must be a number.");
+    });
   });
 
   describe("#withdraw", function(){

@@ -10,8 +10,13 @@ module.exports = function(){
     getBalance: () => { return balance; },
 
     deposit: function(amount){
-      balance+= amount;
-      transactions.push(new Transaction('depost', amount));
+      if(typeof amount == 'number'){
+        balance+= amount;
+        transactions.push(new Transaction('depost', amount));
+      } else {
+        throw new TypeError("Amount to deposit must be a number.");
+      }
+      
     },
 
     withdraw: function withdraw(amount){
